@@ -24,11 +24,18 @@ namespace EmployeeManagement1
             employee.Country = "India";
             employee.StartDate = DateTime.Now;
 
-            repo.AddEmployee(employee);
-            repo.GetAllEmployee();
+            //repo.AddEmployee(employee);
+            //repo.GetAllEmployee();
 
-            Console.WriteLine("Data is retrived succesfully!");
+            //Console.WriteLine("Data is retrived succesfully!");
+            Salary salary = new Salary();
 
+            employee.EmployeeSalary = 50000;
+            employee.SalaryId = 9024;
+            employee.EmployeeId = 9;
+            employee.Month = "Jan";
+
+            salary.UpdateEmployeeSalary(employee);
         }
     }
 }
